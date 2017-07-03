@@ -9,7 +9,6 @@ function bubbleSort(array, passes = 1) {
       array.splice(i, 2, array[i+1], array[i])
     }
   }
-
   if (!sorted) {
     passCount = passes += 1
     return bubbleSort(array, passCount)
