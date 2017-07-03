@@ -3,7 +3,6 @@
 function bubbleSort(array, passes = 1) {
   var sorted = true
   var length = array.length - passes
-
   for (i = 0; i < length; i++) {
     if (array[i] > array[i+1]) {
       sorted = false
@@ -13,9 +12,8 @@ function bubbleSort(array, passes = 1) {
 
   if (!sorted) {
     passCount = passes += 1
-    bubbleSort(array, passCount)
+    return bubbleSort(array, passCount)
   }
-  
   return array
 }
 
