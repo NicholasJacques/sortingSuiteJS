@@ -1,19 +1,18 @@
 // run "mocha test/bubbleSort-test.js" in terminal to test
 
-function bubbleSort(array) {
-  var sorted = false
-
-  while (sorted === false) {
-    sorted = true
-    for (i = 0; i < array.length; i++) {
-      var previous = i
-      var current = i + 1
-
-      if (array[current] < array[previous]) {
-        sorted = false
-        array.splice(previous, 2, array[current], array[previous])
-      }
+function bubbleSort(array, passes = 1) {
+  var sorted = true
+  var length = array.length - passes
+  for (i = 0; i < length; i++) {
+    if (array[i] > array[i+1]) {
+      sorted = false
+      array.splice(i, 2, array[i+1], array[i])
     }
+  }
+
+  if (!sorted) {
+    passCount = passes += 1
+    return bubbleSort(array, passCount)
   }
   return array
 }

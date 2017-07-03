@@ -3,9 +3,14 @@ const bubbleSort = require('../bubbleSort')
 
 describe("bubbleSort function", function() {
   context("with a number array", function() {
-    it("sorts the array", function() {
+    it("can sort negative numbers", function() {
       var array = [3, 15, 1, -6, 27, 106]
       var sortedArray = [-6, 1, 3, 15, 27, 106]
+      assert.deepEqual(bubbleSort(array), sortedArray)
+    })
+    it("can handle two numbers being the same", function() {
+      var array = [3, 15, 27, 1, -6, 27, 106]
+      var sortedArray = [-6, 1, 3, 15, 27, 27, 106]
       assert.deepEqual(bubbleSort(array), sortedArray)
     })
   })
