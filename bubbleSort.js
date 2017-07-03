@@ -1,6 +1,4 @@
-var pry = require('pryjs')
-
-nums = [3, 15, 1, -6, 27, 106]
+// run "mocha test/bubbleSort-test.js" in terminal to test
 
 function bubbleSort(array) {
   var sorted = false
