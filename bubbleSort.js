@@ -2,6 +2,7 @@
 
 function bubbleSort(array) {
   var sorted = false
+
   while (sorted === false) {
     sorted = true
     for (i = 0; i < array.length; i++) {
@@ -11,8 +12,6 @@ function bubbleSort(array) {
       if (array[current] < array[previous]) {
         sorted = false
         array.splice(previous, 2, array[current], array[previous])
-      } else {
-        array
       }
     }
   }
