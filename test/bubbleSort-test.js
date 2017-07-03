@@ -14,7 +14,7 @@ describe("bubbleSort function", function() {
       assert.deepEqual(bubbleSort(array), sortedArray)
     })
   })
-
+  
   context("with a letters array", function() {
     it("sorts the array", function() {
       var array = ["d", "b", "a", "c"]
