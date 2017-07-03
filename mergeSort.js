@@ -1,8 +1,4 @@
-var pry = require('pryjs')
-
 // run "mocha test/mergeSort-test.js" in terminal to test
-
-var numbers = [6, 5, 3, 1, 8, 7, 2, 4]
 
 function mergeSort(array) {
   if (array.length < 2) { return array }
